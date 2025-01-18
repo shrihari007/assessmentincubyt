@@ -17,7 +17,7 @@ class StringSplit
   end
 
   def replace_string(string_num)
-    return result = string_num.gsub(/[,\n]/, ' ')
+    return result = string_num.gsub(/[,\n;]/, ' ')
   end
 
   # string_numbers(string) - String of numbers
