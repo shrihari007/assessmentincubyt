@@ -26,13 +26,14 @@ class StringSplit
       return 0 if string_numbers.length == 0
       negative_nums = []
       cleaned_text = replace_string(string_numbers)
-      split_text = cleaned_text.split(" ")
+      split_numbers = cleaned_text.split(" ")
       result_number = 0
-        split_text.each do |current_number|
+      split_numbers.each do |current_number|
           begin
             if current_number.to_i < 0
               raise NegativeNumberError, "Negative number encountered: #{current_number}"
             end
+            next if current_number.to_i > 999
             result_number += current_number.to_i
           rescue NegativeNumberError
             handle_exception(negative_nums, current_number)
