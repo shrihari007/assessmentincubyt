@@ -9,6 +9,8 @@
 
 ### Steps to Run
 
+- Run bundle install
+
 - Run the code by using the following command
     ``ruby string_split.rb``
 
